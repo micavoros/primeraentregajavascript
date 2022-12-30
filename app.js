@@ -7,7 +7,7 @@ let primerProducto = Number(prompt("Ingresa el primer precio a sumar"))
 let segundoProducto = Number(prompt("Ingresa el segundo precio a sumar"))
 let precioFinal = sumar(primerProducto, segundoProducto)
 alert(precioFinal)
-console.log ("El valor a pagar es " + precioFinal)
+console.log ("El valor a pagar por los productos es de " + precioFinal)
 
 //calcular precio de productos con envio
 //compras mayores a 15000 tienen envio gratis, sino el envio tiene un costo de 500
@@ -44,11 +44,9 @@ const BALTER31 = 600;
 function restar (precioConEnvio, codigoDesc1) {
     return precioConEnvio - codigoDesc1
 }
-let precioConCodigo = restar (productoConEnvio, BALTER31)
-alert (ultimoPrecio)
-console.log ("El monto a abonar es "+ ultimoPrecio)
-
-
+let precioConCodigo = restar (precioConEnvio, BALTER31)
+alert (precioConCodigo)
+console.log ("El monto final a abonar es "+ precioConCodigo)
 
 
 
