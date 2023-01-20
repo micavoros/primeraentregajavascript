@@ -1,3 +1,4 @@
+//PRIMERA PREENTREGA
 
 //calcular el precio total de los productos
 function sumar (producto1, producto2) {
@@ -49,9 +50,50 @@ alert (precioConCodigo)
 console.log ("El monto final a abonar es "+ precioConCodigo)
 
 
+//SEGUNDA PREENTREGA
+
+class Productos {
+    constructor (nombreDeProducto, precio, articulo){
+        this.nombreDeProducto = nombreDeProducto;
+        this.precio = precio;
+        this.articulo = articulo;
+    }
+}
+
+const productos = []
+
+productos.push(new Productos ("Vela Aurora", 1800, 1))
+productos.push(new Productos ("Vela Granada", 1000, 2))
+productos.push(new Productos ("Vela Murcia", 1500, 3))
+productos.push(new Productos ("Vela Baeza",1000, 4))
+productos.push(new Productos ("Vela Alba", 1800, 5))
+console.log(productos)
 
 
+let nuevoIngreso = 0
+while (nuevoIngreso < 3) {
+    let pregunta = new Productos (prompt("Ingresa el nombre"), 
+                        Number(prompt ("Ingresa el precio")), 
+                        Number (prompt("Ingresa el articulo")))
+                        productos.push(pregunta)
+    nuevoIngreso++
+}
+console.log (productos)
 
+//Filtrar productos
+const filtrarPorNombre = productos.find ((productos)=>productos.nombreDeProducto === "Vela Aurora")
+console.log(filtrarPorNombre)
 
+//Filtrar productos iguales o menores a 1500
+function filtrarPorPrecio (precio){
+      return productos.filter(propiedad => propiedad.precio <= Number (precio))
+   }
+console.log (filtrarPorPrecio(1500))
 
-
+function listaDeProductos(){
+    let lista= "";
+    for(const dato of productos){
+        return lista += "Nombre del producto: " + dato.nombreDeProducto + " Precio: " + dato.precio + " Articulo: " + dato.articulo     
+    }
+}
+alert(listaDeProductos())
